@@ -1,0 +1,17 @@
+{
+  "name": "Cybozu Auto Login",
+  "version": "0.1",
+  "manifest_version": 2,
+  "options_page": "options.html",
+  "permissions": [
+    "storage"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["http://*/cgi-bin/cbag/ag.cgi?*"],
+      "js": ["login.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
